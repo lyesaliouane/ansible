@@ -1,0 +1,8 @@
+- name: Mon prmemier play
+  hosts : virtualmachines
+  tasks: 
+    - name: Ping hosts
+      ansible.builtin.ping: ~
+    - name: show message
+      ansible.builtin.debug:
+        msg: "return Bonjour !"
