@@ -4,3 +4,5 @@ virtualmachines:
       ansible_host: root@172.17.0.2
     vm02:
       ansible_host: root@172.17.0.3
+    vm03:
+      ansible_host: root@192.168.100.10
