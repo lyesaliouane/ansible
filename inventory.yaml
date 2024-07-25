@@ -1,8 +1,10 @@
 virtualmachines:
   hosts: 
-    vm01:
-      ansible_host: root@172.17.0.2
-    vm02:
-      ansible_host: root@172.17.0.3
-    vm03:
-      ansible_host: root@192.168.100.10
+    lyes02:
+      ansible_host: root@192.168.100.2
+    lyes03:
+      ansible_host: root@192.168.100.3
+    lyes04:
+      ansible_host: root@192.168.100.4
+    lyes05:
+      ansible_host: root@192.168.100.5
