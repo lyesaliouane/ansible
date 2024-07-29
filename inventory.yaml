@@ -1,10 +1,10 @@
-virtualmachines:
+lyesmachines:
   hosts: 
     lyes02:
-      ansible_host: root@192.168.100.2
+      ansible_host: 192.168.100.2
     lyes03:
-      ansible_host: root@192.168.100.3
+      ansible_host: 192.168.100.3
     lyes04:
-      ansible_host: root@192.168.100.4
+      ansible_host: 192.168.100.4
     lyes05:
-      ansible_host: root@192.168.100.5
+      ansible_host: 192.168.100.5

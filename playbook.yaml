@@ -1,8 +1,14 @@
 - name: Mon prmemier play
-  hosts : virtualmachines
+  hosts : lyesmachines
+  remote_user: root
+  gather_facts: true
+  strategy: free
+  order: inventory
   tasks: 
     - name: Ping hosts
       ansible.builtin.ping: ~
-    - name: show message
-      ansible.builtin.debug:
-        msg: "return Bonjour !"
+
+    - name: apt update cache
+      tags: update
+      ansible.builtin.apt: 
+        update_cache: true
