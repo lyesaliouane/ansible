@@ -3,13 +3,45 @@
   remote_user: root
   become: true
   tasks:
-    - name: Nom de la tasks
-      ansible.builtin.raw: 'sudo apt install python3'
-      args:
-        executable: /bin/bash
+        - name : shell commande 
+          ansible.builtin.shell: | 
+            apt -y install certbot
+
+        - name : commande
+          command:
+            cmd : ls
+            chdir: /root #ou 
+           
+          register : ifconfig_cmd
+        - name : Debug
+          ansible.builtin.debug: 
+            msg : "hostanmes : {{ hostvars }}"
+            verbosity : 3 
+
+      # - name: Install nodejs
+      #   apt:
+      #     name : 
+      #       - nodejs
+      #       - nginx
+      #       - curl 
+      #     state : absent
+      #     update_cache: true
+      #     autoremove: true
+    # - name: Check file presence
+    #   ansible.builtin.file:
+    #     path: ~/check
+    #     state: absent
+    #     owner: root
+    #     group: root
+    #     mode: '0700'
+
+    # - name: Nom de la tasks
+    #   ansible.builtin.raw: 'sudo apt install python3'
+    #   args:
+    #     executable: /bin/bash
     
-    - name: Copier conf
-      copy:
-        src: dockerfile_ansible
-        dest: ~/testinho
-        mode: "0777"
+    # - name: Copier conf
+    #   copy:
+    #     src: dockerfile_ansible
+    #     dest: ~/testinho
+    #     mode: "0777"
